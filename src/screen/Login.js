@@ -63,7 +63,7 @@ export default class Login extends Component {
               </Text>
               <Text
                 style={styles.createAccountLink}
-                onPress={() => this.empty()}>
+                onPress={() => this.props.onRegister()}>
                 Sign up
               </Text>
             </View>

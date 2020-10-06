@@ -21,7 +21,9 @@ export default class Register extends Component {
       <ScrollView style={styles.screen}>
         <StatusBar backgroundColor="#181f3d" />
 
-        <TouchableOpacity style={styles.backIcon} onPress={() => this.empty()}>
+        <TouchableOpacity
+          style={styles.backIcon}
+          onPress={() => this.props.onLoginClick()}>
           <Image
             source={require('../assets/icon/arrow_back_24px_outlined.png')}
           />
@@ -70,7 +72,7 @@ export default class Register extends Component {
 
               <TouchableOpacity
                 style={styles.button}
-                onPress={() => this.empty()}>
+                onPress={() => this.props.onLoginClick()}>
                 <Text style={styles.buttonText}>Sign Up</Text>
               </TouchableOpacity>
             </View>
@@ -81,7 +83,7 @@ export default class Register extends Component {
               </Text>
               <Text
                 style={styles.createAccountLink}
-                onPress={() => this.empty()}>
+                onPress={() => this.props.onLoginClick()}>
                 Login
               </Text>
             </View>
