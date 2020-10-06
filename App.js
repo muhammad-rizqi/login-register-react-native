@@ -10,6 +10,7 @@ export default class App extends Component {
     this.state = {
       screen: 'splash',
     };
+    console.log('Ini dari consturctor');
   }
 
   screen() {
@@ -31,9 +32,14 @@ export default class App extends Component {
         screen: 'login',
       });
     }, 5000);
+    console.log('Ini dari componentDidMount');
   }
 
+  componentDidUpdate() {
+    console.log('Ini dari componentDidUpdate');
+  }
   render() {
+    console.log('Ini dari render');
     return <>{this.screen()}</>;
   }
 }
