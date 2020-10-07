@@ -16,6 +16,9 @@ export default class Register extends Component {
   empty() {
     alert('Not Implemented Yet');
   }
+  goToLogin() {
+    this.props.navigation.navigate('Login');
+  }
   render() {
     return (
       <ScrollView style={styles.screen}>
@@ -23,7 +26,7 @@ export default class Register extends Component {
 
         <TouchableOpacity
           style={styles.backIcon}
-          onPress={() => this.props.onLoginClick()}>
+          onPress={() => this.goToLogin()}>
           <Image
             source={require('../assets/icon/arrow_back_24px_outlined.png')}
           />
@@ -72,7 +75,7 @@ export default class Register extends Component {
 
               <TouchableOpacity
                 style={styles.button}
-                onPress={() => this.props.onLoginClick()}>
+                onPress={() => this.goToLogin()}>
                 <Text style={styles.buttonText}>Sign Up</Text>
               </TouchableOpacity>
             </View>
@@ -83,7 +86,7 @@ export default class Register extends Component {
               </Text>
               <Text
                 style={styles.createAccountLink}
-                onPress={() => this.props.onLoginClick()}>
+                onPress={() => this.goToLogin()}>
                 Login
               </Text>
             </View>

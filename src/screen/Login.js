@@ -63,7 +63,7 @@ export default class Login extends Component {
               </Text>
               <Text
                 style={styles.createAccountLink}
-                onPress={() => this.props.onRegister()}>
+                onPress={() => this.props.navigation.navigate('Register')}>
                 Sign up
               </Text>
             </View>

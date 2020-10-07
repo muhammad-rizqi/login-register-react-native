@@ -1,35 +1,28 @@
 import React, {Component} from 'react';
-import {View} from 'react-native';
-import Login from './src/screen/Login';
-import Register from './src/screen/Register';
+import AppStack from './src/route/appStack';
 import Splash from './src/screen/Splash';
 
 export default class App extends Component {
   constructor() {
     super();
     this.state = {
-      screen: 'splash',
+      screen: false,
     };
     console.log('Ini dari consturctor');
   }
 
   screen() {
-    switch (this.state.screen) {
-      case 'splash':
-        return <Splash />;
-      case 'login':
-        return <Login onRegister={() => this.setState({screen: 'register'})} />;
-      case 'register':
-        return (
-          <Register onLoginClick={() => this.setState({screen: 'login'})} />
-        );
+    if (this.state.screen) {
+      return <AppStack />;
+    } else {
+      return <Splash />;
     }
   }
 
   componentDidMount() {
     setTimeout(() => {
       this.setState({
-        screen: 'login',
+        screen: true,
       });
     }, 5000);
     console.log('Ini dari componentDidMount');
