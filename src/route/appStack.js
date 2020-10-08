@@ -4,6 +4,8 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import Login from '../screen/Login';
 import Register from '../screen/Register';
+import Home from '../screen/core/Home';
+import appDrawer from './appDrawer';
 
 const Stack = createStackNavigator();
 
@@ -20,6 +22,11 @@ export class AppStack extends Component {
           <Stack.Screen
             name="Register"
             component={Register}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="Drawer"
+            component={appDrawer}
             options={{headerShown: false}}
           />
         </Stack.Navigator>

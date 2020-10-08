@@ -7,7 +7,6 @@ export const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -72,5 +71,68 @@ export const styles = StyleSheet.create({
     width: 40,
     height: 40,
     margin: 8,
+  },
+  title: {
+    color: '#f0f1f2',
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginVertical: 16,
+  },
+  appBar: {
+    color: '#f0f1f2',
+    height: 56,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  icon: {
+    width: 32,
+    height: 32,
+    tintColor: '#f0f1f2',
+    margin: 8,
+  },
+  floatActionBar: {
+    position: 'absolute',
+    bottom: 32,
+    right: 32,
+  },
+  contentWrapper: {
+    marginLeft: 16,
+  },
+  text: {
+    color: '#f0f1f2',
+  },
+  categoryContainer: {
+    paddingVertical: 8,
+  },
+  category: {
+    backgroundColor: '#080f2d',
+    justifyContent: 'center',
+    height: 80,
+    padding: 8,
+    width: 180,
+    borderRadius: 16,
+    marginRight: 8,
+  },
+  categoryTitle: {
+    color: '#f0f1f2',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+  todo: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#080f2d',
+    borderRadius: 16,
+    padding: 8,
+    marginVertical: 8,
+  },
+  todoIcon: {
+    width: 24,
+    height: 24,
+    tintColor: '#181f1d',
+    margin: 8,
+  },
+  todoList: {
+    marginRight: 16,
   },
 });
